@@ -1,0 +1,53 @@
+\documentclass[tikz,border=3.14pt]{standalone}
+\usepackage{harris-nsc}
+\definecolor{bg}{HTML}{EFE9CF}
+\definecolor{bt}{HTML}{020682}
+\definecolor{rt}{HTML}{C8371A}
+\definecolor{yt}{HTML}{E8D300}
+
+\begin{document}
+
+\pagecolor{bg}
+\begin{tikzpicture}[scale=1, rotate=100]
+    \foreach \k/\c in {14/02,13/04,12/06,11/08,10/10,9/12,8/14,7/16,6/18,5/20}
+    {
+        \draw[very thick] (0,0) circle (\k);
+        
+        \foreach \i in {1,...,18} {
+            \fill[\i\c] (0, 0) -- (-\i * 20:\k) arc [start angle=-\i * 20, end angle=-(\i - 1) * 20, radius = \k] -- cycle;                
+            \draw[black, very thin] (0,0) -- ({\i*20}:\k + 0.25);
+        }
+
+        \ifnum \k <14
+            \pgfmathtruncatemacro{\numcircles}{3 + (13 - \k)}
+            \pgfmathsetmacro{\delta}{1/(\numcircles + 1)}
+            \foreach \x in {1,...,\numcircles} {
+                \pgfmathsetmacro{\g}{\k - \x*\delta}
+                \draw[black, very thin, opacity=0.3] (0,0) circle (\g);
+            }
+        \fi
+    }
+
+    \draw[fill=bg] (0,0) circle (4);
+    
+    \begin{scope}[rotate=-100]
+        \draw (0,0) -- (-30:3.5);
+        \draw (0,0) -- (90:3.5);
+        \draw (0,0) -- (210:3.5);
+        \draw[fill=bt, shift={(-0.6875,-0.6875)}] (30:2) -- (150:2) -- (270:2) -- cycle;
+        \draw[fill=yt, shift={(0.6875,-0.6875)}] (30:2) -- (150:2) -- (270:2) -- cycle;
+        \draw[fill=rt, yshift=0.5cm] (30:2) -- (150:2) -- (270:2) -- cycle;
+        \draw[fill=black, yshift=-0.28125cm] (30:1.21875) -- (150:1.21875) -- (270:1.21875) -- cycle;
+    \end{scope}
+
+    \foreach \k [evaluate=\k as \num using int((22 - 2*\k) + 5)] in {12.5,11.5,...,3.5} {
+        \node at ({-10}:\k + 1) {\textbf{\num}};
+        \node at ({170}:\k + 1) {\textbf{\num}};
+    }
+
+    \foreach \j [evaluate=\j as \angle using int(10 - 20*(\j - 1))] in {1,...,18} {
+        \node[scale=0.5] at (\angle:3.75) {\textbf{\j}};
+    }
+\end{tikzpicture}
+
+\end{document}
