@@ -45,7 +45,7 @@
         \node at ({170}:\k + 1) {\textbf{\num}};
     }
 
-    \foreach \j [evaluate=\j as \angle using int(10 - 20*(\j - 1))] in {1,...,18} {
+    \foreach \j [evaluate=\j as \angle using int(-10 - 20*(\j - 1))] in {1,...,18} {
         \node[scale=0.5] at (\angle:3.75) {\textbf{\j}};
     }
 \end{tikzpicture}
