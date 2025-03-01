@@ -1,0 +1,224 @@
+\ProvidesPackage{harris-nsc}[2025-02-08 v0.1.0]
+\RequirePackage{xcolor}
+
+
+% PRISMATIC COLOURS
+% SPEC: (DD)(DD)
+% FIRST DD: 01~18 (RED ~ PURPLE-RED)
+% SECOND DD: 02~20 (even numbers, all LIGHT and 20 is PURE)
+
+% red
+\providecolor{102}{HTML}{F4D9BB} % #F4D9BB
+\providecolor{104}{HTML}{F5C7A7} % #F5C7A7
+\providecolor{106}{HTML}{F6B392} % #F6B392
+\providecolor{108}{HTML}{F4A17E} % #F4A17E
+\providecolor{110}{HTML}{F38E6D} % #F38E6D
+\providecolor{112}{HTML}{F27E5D} % #F27E5D
+\providecolor{114}{HTML}{F37555} % #F37555
+\providecolor{116}{HTML}{EE5C3D} % #EE5C3D
+\providecolor{118}{HTML}{EB4C2E} % #EB4C2E
+\providecolor{120}{HTML}{EB4223} % #EB4223
+
+% orange-red
+\providecolor{202}{HTML}{F3DCB7} % #F3DCB7
+\providecolor{204}{HTML}{F3C99B} % #F3C99B
+\providecolor{206}{HTML}{F5BF8B} % #F5BF8B
+\providecolor{208}{HTML}{F5AF75} % #F5AF75
+\providecolor{210}{HTML}{F39C60} % #F39C60
+\providecolor{212}{HTML}{F38F53} % #F38F53
+\providecolor{214}{HTML}{F38146} % #F38146
+\providecolor{216}{HTML}{F3753B} % #F3753B
+\providecolor{218}{HTML}{F1632F} % #F1632F
+\providecolor{220}{HTML}{F15526} % #F15526
+
+% red-orange
+\providecolor{302}{HTML}{F4E1B7} % #F4E1B7
+\providecolor{304}{HTML}{F6D69E} % #F6D69E
+\providecolor{306}{HTML}{F6C886} % #F6C886
+\providecolor{308}{HTML}{F4B76D} % #F4B76D
+\providecolor{310}{HTML}{F7B061} % #F7B061
+\providecolor{312}{HTML}{F7A04F} % #F7A04F
+\providecolor{314}{HTML}{F89443} % #F89443
+\providecolor{316}{HTML}{F9893A} % #F9893A
+\providecolor{318}{HTML}{F97B31} % #F97B31
+\providecolor{320}{HTML}{FA6D2A} % #FA6D2A
+
+% orange
+\providecolor{402}{HTML}{F5E5B7} % #F5E5B7
+\providecolor{404}{HTML}{F5D896} % #F5D896
+\providecolor{406}{HTML}{F7CF80} % #F7CF80
+\providecolor{408}{HTML}{F7C368} % #F7C368
+\providecolor{410}{HTML}{F9BB5A} % #F9BB5A
+\providecolor{412}{HTML}{F7AB45} % #F7AB45
+\providecolor{414}{HTML}{FBA63F} % #FBA63F
+\providecolor{416}{HTML}{FC9933} % #FC9933
+\providecolor{418}{HTML}{FD8E2C} % #FD8E2C
+\providecolor{420}{HTML}{FE8227} % #FE8227
+
+% yellow-orange
+\providecolor{502}{HTML}{F2E5B2} % #F2E5B2
+\providecolor{504}{HTML}{F5DF98} % #F5DF98
+\providecolor{506}{HTML}{F6D57B} % #F6D57B
+\providecolor{508}{HTML}{F7CC64} % #F7CC64
+\providecolor{510}{HTML}{F9C553} % #F9C553
+\providecolor{512}{HTML}{F9BA41} % #F9BA41
+\providecolor{514}{HTML}{FBB337} % #FBB337
+\providecolor{516}{HTML}{FCAB2E} % #FCAB2E
+\providecolor{518}{HTML}{FDA427} % #FDA427
+\providecolor{520}{HTML}{FF9921} % #FF9921
+
+% orange-yellow
+\providecolor{602}{HTML}{F5ECB4} % #F5ECB4
+\providecolor{604}{HTML}{F7E79A} % #F7E79A
+\providecolor{606}{HTML}{F5DF77} % #F5DF77
+\providecolor{608}{HTML}{F9DD67} % #F9DD67
+\providecolor{610}{HTML}{FBD853} % #FBD853
+\providecolor{612}{HTML}{FACF3B} % #FACF3B
+\providecolor{614}{HTML}{FDCD34} % #FDCD34
+\providecolor{616}{HTML}{FDC728} % #FDC728
+\providecolor{618}{HTML}{FEC21D} % #FEC21D
+\providecolor{620}{HTML}{FFBC15} % #FFBC15
+
+% yellow
+\providecolor{702}{HTML}{F4EEB2} % #F4EEB2
+\providecolor{704}{HTML}{F4EE93} % #F4EE93
+\providecolor{706}{HTML}{F8EF7A} % #F8EF7A
+\providecolor{708}{HTML}{F9EF65} % #F9EF65
+\providecolor{710}{HTML}{FAEE4F} % #FAEE4F
+\providecolor{712}{HTML}{FAEC37} % #FAEC37
+\providecolor{714}{HTML}{FDEE2D} % #FDEE2D
+\providecolor{716}{HTML}{FCEC18} % #FCEC18
+\providecolor{718}{HTML}{FDEB0B} % #FDEB0B
+\providecolor{720}{HTML}{FEEC01} % #FEEC01
+
+% green-yellow
+\providecolor{802}{HTML}{F0EEBD} % #F0EEBD
+\providecolor{804}{HTML}{E7EAA2} % #E7EAA2
+\providecolor{806}{HTML}{DDE786} % #DDE786
+\providecolor{808}{HTML}{D9E676} % #D9E676
+\providecolor{810}{HTML}{CEE360} % #CEE360
+\providecolor{812}{HTML}{C2DD4B} % #C2DD4B
+\providecolor{814}{HTML}{BADB41} % #BADB41
+\providecolor{816}{HTML}{ACD432} % #ACD432
+\providecolor{818}{HTML}{A3D02C} % #A3D02C
+\providecolor{820}{HTML}{94C725} % #94C725
+
+% yellow-green
+\providecolor{902}{HTML}{E4E8C0} % #E4E8C0
+\providecolor{904}{HTML}{D7E3AF} % #D7E3AF
+\providecolor{906}{HTML}{C6DD9B} % #C6DD9B
+\providecolor{908}{HTML}{BAD98B} % #BAD98B
+\providecolor{910}{HTML}{ACD57D} % #ACD57D
+\providecolor{912}{HTML}{9CCE6E} % #9CCE6E
+\providecolor{914}{HTML}{88C55E} % #88C55E
+\providecolor{916}{HTML}{76BB52} % #76BB52
+\providecolor{918}{HTML}{66B049} % #66B049
+\providecolor{920}{HTML}{4D9D3F} % #4D9D3F
+
+% green
+\providecolor{1002}{HTML}{D9E4C4} % #D9E4C4
+\providecolor{1004}{HTML}{C8D9B0} % #C8D9B0
+\providecolor{1006}{HTML}{BBD5A6} % #BBD5A6
+\providecolor{1008}{HTML}{A2CB94} % #A2CB94
+\providecolor{1010}{HTML}{9FCB92} % #9FCB92
+\providecolor{1012}{HTML}{85BE7E} % #85BE7E
+\providecolor{1014}{HTML}{6FB16F} % #6FB16F
+\providecolor{1016}{HTML}{61A865} % #61A865
+\providecolor{1018}{HTML}{4C9857} % #4C9857
+\providecolor{1020}{HTML}{367847} % #367847
+
+% green-blue
+\providecolor{1102}{HTML}{D9E2CA} % #D9E2CA
+\providecolor{1104}{HTML}{C1D8C2} % #C1D8C2
+\providecolor{1106}{HTML}{A9CCB9} % #A9CCB9
+\providecolor{1108}{HTML}{8DBEAC} % #8DBEAC
+\providecolor{1110}{HTML}{7DB6A6} % #7DB6A6
+\providecolor{1112}{HTML}{68A89A} % #68A89A
+\providecolor{1114}{HTML}{4E968A} % #4E968A
+\providecolor{1116}{HTML}{4B9388} % #4B9388
+\providecolor{1118}{HTML}{2F756D} % #2F756D
+\providecolor{1120}{HTML}{23645F} % #23645F
+
+% green-blue
+\providecolor{1202}{HTML}{D4DFCD} % #D4DFCD
+\providecolor{1204}{HTML}{B9D3C9} % #B9D3C9
+\providecolor{1206}{HTML}{9CC4C4} % #9CC4C4
+\providecolor{1208}{HTML}{85B7C1} % #85B7C1
+\providecolor{1210}{HTML}{6EA9BA} % #6EA9BA
+\providecolor{1212}{HTML}{5395AF} % #5395AF
+\providecolor{1214}{HTML}{4488A7} % #4488A7
+\providecolor{1216}{HTML}{337699} % #337699
+\providecolor{1218}{HTML}{26648A} % #26648A
+\providecolor{1220}{HTML}{1A4B71} % #1A4B71
+
+% blue
+\providecolor{1302}{HTML}{D1DBD5} % #D1DBD5
+\providecolor{1304}{HTML}{B4C7D7} % #B4C7D7
+\providecolor{1306}{HTML}{8CAAD8} % #8CAAD8
+\providecolor{1308}{HTML}{7397DA} % #7397DA
+\providecolor{1310}{HTML}{5B82DA} % #5B82DA
+\providecolor{1312}{HTML}{476DDA} % #476DDA
+\providecolor{1314}{HTML}{375DD9} % #375DD9
+\providecolor{1316}{HTML}{203ED0} % #203ED0
+\providecolor{1318}{HTML}{0F23C2} % #0F23C2
+\providecolor{1320}{HTML}{0307AB} % #0307AB
+
+% purple-blue
+\providecolor{1402}{HTML}{D7D9CD} % #D7D9CD
+\providecolor{1404}{HTML}{BFC4C8} % #BFC4C8
+\providecolor{1406}{HTML}{A8AFC1} % #A8AFC1
+\providecolor{1408}{HTML}{8E94B8} % #8E94B8
+\providecolor{1410}{HTML}{7C81B2} % #7C81B2
+\providecolor{1412}{HTML}{6C70AB} % #6C70AB
+\providecolor{1414}{HTML}{55549C} % #55549C
+\providecolor{1416}{HTML}{4C4996} % #4C4996
+\providecolor{1418}{HTML}{3F398A} % #3F398A
+\providecolor{1420}{HTML}{2F2373} % #2F2373
+
+% blue-purple
+\providecolor{1502}{HTML}{DBDACC} % #DBDACC
+\providecolor{1504}{HTML}{C5C6C4} % #C5C6C4
+\providecolor{1506}{HTML}{ACADBB} % #ACADBB
+\providecolor{1508}{HTML}{9999B4} % #9999B4
+\providecolor{1510}{HTML}{8684AB} % #8684AB
+\providecolor{1512}{HTML}{716B9F} % #716B9F
+\providecolor{1514}{HTML}{5E5592} % #5E5592
+\providecolor{1516}{HTML}{554A8B} % #554A8B
+\providecolor{1518}{HTML}{42367A} % #42367A
+\providecolor{1520}{HTML}{37286B} % #37286B
+
+% purple
+\providecolor{1602}{HTML}{E4DECC} % #E4DECC
+\providecolor{1604}{HTML}{CEC5BE} % #CEC5BE
+\providecolor{1606}{HTML}{B9AEB1} % #B9AEB1
+\providecolor{1608}{HTML}{A495A4} % #A495A4
+\providecolor{1610}{HTML}{98869B} % #98869B
+\providecolor{1612}{HTML}{897490} % #897490
+\providecolor{1614}{HTML}{785F81} % #785F81
+\providecolor{1616}{HTML}{664C72} % #664C72
+\providecolor{1618}{HTML}{5B4269} % #5B4269
+\providecolor{1620}{HTML}{4A3256} % #4A3256
+
+% red-purple
+\providecolor{1702}{HTML}{E8D9C5} % #E8D9C5
+\providecolor{1704}{HTML}{D3B9AB} % #D3B9AB
+\providecolor{1706}{HTML}{CFB0A5} % #CFB0A5
+\providecolor{1708}{HTML}{C59E97} % #C59E97
+\providecolor{1710}{HTML}{B78985} % #B78985
+\providecolor{1712}{HTML}{AA7674} % #AA7674
+\providecolor{1714}{HTML}{A16A6B} % #A16A6B
+\providecolor{1716}{HTML}{905757} % #905757
+\providecolor{1718}{HTML}{864E4C} % #864E4C
+\providecolor{1720}{HTML}{733F39} % #733F39
+
+% purple-red
+\providecolor{1802}{HTML}{EAD5BD} % #EAD5BD
+\providecolor{1804}{HTML}{E5C3AA} % #E5C3AA
+\providecolor{1806}{HTML}{E0B099} % #E0B099
+\providecolor{1808}{HTML}{DBA18B} % #DBA18B
+\providecolor{1810}{HTML}{D28B76} % #D28B76
+\providecolor{1812}{HTML}{CA7D67} % #CA7D67
+\providecolor{1814}{HTML}{C06C55} % #C06C55
+\providecolor{1816}{HTML}{B86049} % #B86049
+\providecolor{1818}{HTML}{AF543B} % #AF543B
+\providecolor{1820}{HTML}{A14629} % #A14629
